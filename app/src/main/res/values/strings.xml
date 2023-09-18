@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">A17_TP_Android</string>
+
+    <string name="cr_er_un_compte">Créer un compte</string>
+    <string name="mot_de_passe">Mot de passe</string>
+    <string name="nom_d_utilisateur">Nom d\'utilisateur</string>
+    <string name="courriel">Courriel</string>
+    <string name="cr_er">CRÉER</string>
+    <string name="se_connecter">Se connecter</string>
+    <string name="connexion">CONNEXION</string>
+    <string name="voir_activit_s">Voir activités</string>
+    <string name="liste_des_activit_s">Liste des activités</string>
+    <string name="cr_er_une_activit">Créer une activité</string>
 </resources>
