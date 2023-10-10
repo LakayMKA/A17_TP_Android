@@ -12,6 +12,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import android.view.Menu;
+import android.view.View;
 import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -39,26 +40,23 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-
-        // Obtenez une instance de la base de données avec l'URL correcte
-        FirebaseDatabase database = FirebaseDatabase.getInstance("https://a17-tp-android-default-rtdb.firebaseio.com/");
-
-        // Obtenez une référence à la "message" noeud
-        DatabaseReference myRef = database.getReference("message");
-
-        // Définir une valeur pour le noeud référencé
-        myRef.setValue("Hello, World!");
-
-        myRef.setValue("Hello, World!").addOnSuccessListener(new OnSuccessListener<Void>() {
+        btnCreerActivite.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onSuccess(Void aVoid) {
-                Log.d("Firebase", "Données écrites avec succès !");
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Log.e("Firebase", "Erreur lors de l'écriture des données", e);
+            public void onClick(View view) {
+                // Lancer l'activité CreationEvenement
+                Intent intent = new Intent(MainActivity.this, CreationEvenement.class);
+                startActivity(intent);
             }
         });
+
+        btnListActivites.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Lancer l'activité qui affiche la liste des événements (que vous devez créer si elle n'existe pas encore)
+                Intent intent = new Intent(MainActivity.this, ListEvenementsActivity.class);  // Assurez-vous de remplacer par le nom de votre activité de liste.
+                startActivity(intent);
+            }
+        });
+
     }
 }

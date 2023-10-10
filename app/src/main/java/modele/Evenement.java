@@ -2,10 +2,11 @@ package modele;
 
 public class Evenement {
 
-    private int id;
     private String nom;
     private String adresse;
     private String date;
+
+    private String description;
     private String type;
     private int nombreParticipant;
 
@@ -18,21 +19,14 @@ public class Evenement {
         this.nombreParticipant = nombreParticipant;
     }
 
-    public Evenement(int id, String nom,String adresse, String date, String type, int nombreParticipant) {
-        this.id = id;
+    public Evenement(String nom,String adresse, String date, String description, String type, int nombreParticipant) {
+
         this.nom = nom;
         this.adresse = adresse;
         this.date = date;
         this.type = type;
         this.nombreParticipant = nombreParticipant;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+        this.description = description;
     }
 
     public String getNom() {
@@ -78,9 +72,9 @@ public class Evenement {
     @Override
     public String toString() {
         return "Evenement{" +
-                "id=" + id +
                 ", nom='" + nom + '\'' +
                 ", date='" + date + '\'' +
+                ", description='" + description + '\'' +
                 ", type='" + type + '\'' +
                 ", nombreParticipant=" + nombreParticipant +
                 '}';
