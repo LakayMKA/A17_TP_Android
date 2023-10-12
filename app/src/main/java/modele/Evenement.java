@@ -2,6 +2,7 @@ package modele;
 
 public class Evenement {
 
+    private String cle;
     private String nom;
     private String adresse;
     private String date;
@@ -27,6 +28,14 @@ public class Evenement {
         this.type = type;
         this.nombreParticipant = nombreParticipant;
         this.description = description;
+    }
+
+    public String getCle() {
+        return cle;
+    }
+
+    public void setCle(String cle) {
+        this.cle = cle;
     }
 
     public String getNom() {
@@ -67,6 +76,14 @@ public class Evenement {
 
     public void setNombreParticipant(int nombreParticipant) {
         this.nombreParticipant = nombreParticipant;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Override

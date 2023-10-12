@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fleur3"
+    android:padding="16dp">
+
+            <!-- Nom de l'événement -->
+    <TextView
+        android:id="@+id/lblNomActiviteDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Nom de l'activité"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#9C27B0"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Ligne horizontale sous le nom -->
+    <View
+        android:id="@+id/lineNom"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="#2E7D32"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblNomActiviteDetail" />
+
+            <!-- Date de l'événement -->
+            <TextView
+                android:id="@+id/lblDateDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:layout_marginTop="16dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblNomActiviteDetail"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Ligne horizontale sous la date -->
+    <View
+        android:id="@+id/lineDate"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="#2E7D32"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblDateDetail" />
+
+
+            <!-- Adresse de l'événement -->
+            <TextView
+                android:id="@+id/lblAdresseDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Adresse"
+                android:layout_marginTop="8dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblDateDetail"
+                app:layout_constraintEnd_toEndOf="parent" />
+    <!-- Ligne horizontale sous la date -->
+    <View
+        android:id="@+id/lineAdresse"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="#2E7D32"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblAdresseDetail" />
+            <!-- Type d'événement -->
+            <TextView
+                android:id="@+id/lblTypeDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Type"
+                android:layout_marginTop="8dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblAdresseDetail"
+                app:layout_constraintEnd_toEndOf="parent" />
+    <View
+        android:id="@+id/lineType"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="#2E7D32"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblTypeDetail" />
+            <!-- Description de l'événement -->
+            <TextView
+                android:id="@+id/lblDescriptionDetail"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:text="Description"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@id/lblNombreParticipantDetail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblTypeDetail" />
+    <View
+        android:id="@+id/lineDescription"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="#2E7D32"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblDescriptionDetail" />
+            <!-- Nombre de participants -->
+            <TextView
+                android:id="@+id/lblNombreParticipantDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="0 participant(s)"
+                android:layout_marginTop="8dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblDescriptionDetail"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Bouton pour participer à l'événement -->
+            <Button
+                android:id="@+id/btnParticiper"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Participer"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblNombreParticipantDetail"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

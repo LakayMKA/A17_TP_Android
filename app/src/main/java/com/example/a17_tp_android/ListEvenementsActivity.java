@@ -3,9 +3,11 @@ package com.example.a17_tp_android;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -45,6 +47,8 @@ public class ListEvenementsActivity extends AppCompatActivity {
 
     }
 
+
+
     private void rafraichirListeListener(DatabaseReference evenementReference) {
         evenementReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -54,12 +58,26 @@ public class ListEvenementsActivity extends AppCompatActivity {
                 Iterable<DataSnapshot> listing = dataSnapshot.getChildren();
                 Iterator<DataSnapshot> iterator = listing.iterator();
                 while (iterator.hasNext()) {
-                    Evenement value = iterator.next().getValue(Evenement.class);
+                    DataSnapshot snapshot = iterator.next();
+                    Evenement value = snapshot.getValue(Evenement.class);
+                    value.setCle(snapshot.getKey());
                     evenementList.add(value);
                 }
 
                 adapter = setupAdapter(evenementList);
                 listView.setAdapter(adapter);
+
+                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                        Evenement evenementClique = evenementList.get(position);
+
+                        // Lancer une nouvelle activité pour afficher les détails de l'événement
+                        Intent intent = new Intent(ListEvenementsActivity.this, DetailsEvenement.class);
+                        intent.putExtra("EVENEMENT_CLE", evenementClique.getCle());
+                        startActivity(intent);
+                    }
+                });
             }
 
 

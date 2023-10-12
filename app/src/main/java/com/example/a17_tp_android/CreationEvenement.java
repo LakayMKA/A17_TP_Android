@@ -2,6 +2,7 @@ package com.example.a17_tp_android;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -58,6 +59,9 @@ public class CreationEvenement extends AppCompatActivity {
                 evenementReference.child(key).setValue(newEvent);
 
                 Toast.makeText(CreationEvenement.this, "Événement ajouté avec succès!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(CreationEvenement.this, ListEvenementsActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
 

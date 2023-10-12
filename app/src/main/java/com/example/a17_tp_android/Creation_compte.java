@@ -19,6 +19,12 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Creation_compte extends AppCompatActivity {
 
@@ -99,6 +105,18 @@ public class Creation_compte extends AppCompatActivity {
                                 progressBar.setVisibility(View.GONE);
 
                                 if (task.isSuccessful()) {
+
+                                    // Get user ID
+                                    String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+                                    // Create user data
+                                    Map<String, Object> userData = new HashMap<>();
+                                    userData.put("courriel", courriel);
+                                    userData.put("eventsAttending", new ArrayList<>());
+
+                                    // Add user data to the database
+                                    DatabaseReference userRef = FirebaseDatabase.getInstance().getReference("users");
+                                    userRef.child(userId).setValue(userData);
 
                                     Toast.makeText(Creation_compte.this, "Authentication réussie.",
                                             Toast.LENGTH_SHORT).show();
