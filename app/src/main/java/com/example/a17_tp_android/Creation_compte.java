@@ -1,12 +1,10 @@
 package com.example.a17_tp_android;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,7 +24,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Creation_compte extends AppCompatActivity {
+public class Creation_compte extends MenuActivity {
 
     EditText txtCourrielCreation;
     EditText txtMotDepasseCreation;
@@ -81,12 +79,19 @@ public class Creation_compte extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 progressBar.setVisibility(View.VISIBLE);
-                String courriel, motDePasse;
+                String courriel, motDePasse, nomUtilisateur;
                 courriel = String.valueOf(txtCourrielCreation.getText());
                 motDePasse = String.valueOf(txtMotDepasseCreation.getText());
+                nomUtilisateur = String.valueOf(txtNomUtilisateurCreation.getText());
 
                 if(TextUtils.isEmpty(courriel)){
                     Toast.makeText(Creation_compte.this,"Saisir votre courriel",
+                            Toast.LENGTH_SHORT);
+                    return;
+                }
+
+                if(TextUtils.isEmpty(nomUtilisateur)){
+                    Toast.makeText(Creation_compte.this,"Saisir votre nom d'utilisateur",
                             Toast.LENGTH_SHORT);
                     return;
                 }
@@ -112,6 +117,7 @@ public class Creation_compte extends AppCompatActivity {
                                     // Create user data
                                     Map<String, Object> userData = new HashMap<>();
                                     userData.put("courriel", courriel);
+                                    userData.put("nomUtilisateur", nomUtilisateur);
                                     userData.put("eventsAttending", new ArrayList<>());
 
                                     // Add user data to the database
@@ -141,4 +147,10 @@ public class Creation_compte extends AppCompatActivity {
 
 
     }
+
+
+
+
+
+
 }

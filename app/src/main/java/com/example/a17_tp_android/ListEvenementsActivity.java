@@ -1,7 +1,6 @@
 package com.example.a17_tp_android;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -24,7 +23,7 @@ import java.util.List;
 
 import modele.Evenement;
 
-public class ListEvenementsActivity extends AppCompatActivity {
+public class ListEvenementsActivity extends MenuActivity {
     private List<Evenement> evenementList;
     private ListView listView;
     private ArrayAdapter adapter;

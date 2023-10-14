@@ -1,7 +1,5 @@
 package com.example.a17_tp_android;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,7 +12,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import modele.Evenement;
 
-public class CreationEvenement extends AppCompatActivity {
+public class CreationEvenement extends MenuActivity {
 
     // Déclaration des champs EditText
     private EditText txtNom, txtAdresse, txtDate, txtDescription, txtType, txtNombre;

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_profil"
+        android:title="Profil"
+        android:icon="@drawable/baseline_account_circle_24"/>
+
+    <item
+        android:id="@+id/menu_accueil"
+        android:title="Accueil"
+        android:icon="@drawable/baseline_home_24"/>
+
+    <item
+        android:id="@+id/menu_deconnexion"
+        android:title="Déconnexion"
+        android:icon="@drawable/baseline_exit_to_app_24"/>
+
+    <item
+        android:id="@+id/menu_recherche"
+        android:title="Recherche"
+        android:icon="@drawable/baseline_search_24"/>
+
+</menu>

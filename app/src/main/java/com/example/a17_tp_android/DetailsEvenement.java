@@ -2,7 +2,6 @@ package com.example.a17_tp_android;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
@@ -21,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import modele.Evenement;
 
-public class DetailsEvenement extends AppCompatActivity {
+public class DetailsEvenement extends MenuActivity {
     // Ajouter des références pour les vues
     private TextView lblNomActiviteDetail;
     private TextView lblDateDetail;
