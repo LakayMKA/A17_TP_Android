@@ -15,6 +15,9 @@
         android:theme="@style/Theme.A17_TP_Android"
         tools:targetApi="31">
         <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".SearchActivity"
             android:exported="false" />
         <activity
