@@ -21,7 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 import modele.Evenement;
 
 public class DetailsEvenement extends MenuActivity {
-    // Ajouter des références pour les vues
+
     private TextView lblNomActiviteDetail;
     private TextView lblDateDetail;
     private TextView lblAdresseDetail;
@@ -117,7 +117,7 @@ public class DetailsEvenement extends MenuActivity {
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
-                        //Gerer erreurs
+
                     }
                 });
             }

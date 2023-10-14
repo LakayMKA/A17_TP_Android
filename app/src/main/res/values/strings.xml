@@ -1,13 +1,32 @@
 <resources>
 
-    <string name="cr_er_un_compte">Créer un compte</string>
+
     <string name="mot_de_passe">Mot de passe</string>
     <string name="nom_d_utilisateur">Nom d\'utilisateur</string>
     <string name="courriel">Courriel</string>
-    <string name="cr_er">CRÉER</string>
+    <string name="creer">CRÉER</string>
     <string name="se_connecter">Se connecter</string>
     <string name="connexion">CONNEXION</string>
-    <string name="voir_activit_s">Voir activités</string>
-    <string name="liste_des_activit_s">Liste des activités</string>
-    <string name="cr_er_une_activit">Créer une activité</string>
+    <string name="voir_activites">Voir activités</string>
+    <string name="liste_des_activites">Liste des activités</string>
+    <string name="creer_une_activite">Créer une activité</string>
+    <string name="creer_un_compte">Créer un compte</string>
+    <string name="recherche">Recherche</string>
+    <string name="d_connexion">Déconnexion</string>
+    <string name="accueil">Accueil</string>
+    <string name="profil">Profil</string>
+    <string name="type">Type</string>
+    <string name="adresse">Adresse :</string>
+    <string name="nombre_de_participants">Nombre de participants:</string>
+    <string name="type_d_activit">Type d\'activité:</string>
+    <string name="date">Date:</string>
+    <string name="description">Description:</string>
+    <string name="cr_ation_de_l_v_nement">Création de l\'événement</string>
+    <string name="nom">Nom:</string>
+    <string name="créer">Créer</string>
+    <string name="_0_participant_s">0 participant(s)</string>
+    <string name="participer">Participer</string>
+    <string name="evenements">ÉVÈNEMENTS</string>
+
+
 </resources>

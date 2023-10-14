@@ -17,13 +17,13 @@ public class MenuActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        super.setContentView(R.layout.bouton_menu_layout);  // Utilisez la mise en page de base
+        super.setContentView(R.layout.bouton_menu_layout);
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showMenu(view);
+                afficherMenu(view);
             }
         });
     }
@@ -34,7 +34,7 @@ public class MenuActivity extends AppCompatActivity {
         getLayoutInflater().inflate(layoutResID, activityContent, true);
     }
 
-    public void showMenu(View v) {
+    public void afficherMenu(View v) {
         PopupMenu popup = new PopupMenu(this, v);
         popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override

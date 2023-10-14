@@ -3,22 +3,24 @@
 
     <item
         android:id="@+id/menu_profil"
-        android:title="Profil"
-        android:icon="@drawable/baseline_account_circle_24"/>
+        android:icon="@drawable/baseline_account_circle_24"
+        android:title="@string/profil" />
 
     <item
         android:id="@+id/menu_accueil"
-        android:title="Accueil"
-        android:icon="@drawable/baseline_home_24"/>
+        android:icon="@drawable/baseline_home_24"
+        android:title="@string/accueil" />
 
     <item
         android:id="@+id/menu_deconnexion"
-        android:title="Déconnexion"
-        android:icon="@drawable/baseline_exit_to_app_24"/>
+        android:icon="@drawable/baseline_exit_to_app_24"
+        android:title="@string/d_connexion" />
 
     <item
         android:id="@+id/menu_recherche"
-        android:title="Recherche"
-        android:icon="@drawable/baseline_search_24"/>
+        android:icon="@drawable/baseline_search_24"
+        android:title="@string/recherche" />
+
+
 
 </menu>

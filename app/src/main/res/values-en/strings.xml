@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="mot_de_passe">Password</string>
+    <string name="nom_d_utilisateur">Username</string>
+    <string name="courriel">Email</string>
+    <string name="creer">CREATE</string>
+    <string name="se_connecter">Sign in</string>
+    <string name="connexion">SIGN IN</string>
+    <string name="voir_activites">View activities</string>
+    <string name="liste_des_activites">List of activities</string>
+    <string name="creer_une_activite">Create an activity</string>
+    <string name="creer_un_compte">Create an account</string>
+    <string name="recherche">Search</string>
+    <string name="d_connexion">Log out</string>
+    <string name="accueil">Home</string>
+    <string name="profil">Profile</string>
+    <string name="type">Type</string>
+    <string name="adresse">Address:</string>
+    <string name="nombre_de_participants">Number of participants:</string>
+    <string name="type_d_activit">Activity type:</string>
+    <string name="date">Date:</string>
+    <string name="description">Description:</string>
+    <string name="cr_ation_de_l_v_nement">Event creation</string>
+    <string name="nom">Name:</string>
+    <string name="créer">Create</string>
+    <string name="_0_participant_s">0 participant(s)</string>
+    <string name="participer">Participate</string>
+    <string name="evenements">EVENTS</string>
+
+</resources>
