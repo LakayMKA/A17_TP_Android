@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/herbe"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/fleur3">
+    android:layout_height="match_parent">
 
 
     <ListView

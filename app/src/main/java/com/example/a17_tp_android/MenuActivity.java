@@ -42,7 +42,8 @@ public class MenuActivity extends AppCompatActivity {
                 int id = item.getItemId();
 
                 if (id == R.id.menu_profil) {
-                    // Intent pour le profil
+                    Intent intent = new Intent(MenuActivity.this, ProfileActivity.class);
+                    startActivity(intent);
                     return true;
                 } else if (id == R.id.menu_accueil) {
                     Intent intent = new Intent(MenuActivity.this, MainActivity.class);
@@ -56,7 +57,8 @@ public class MenuActivity extends AppCompatActivity {
                     finish();
                     return true;
                 } else if (id == R.id.menu_recherche) {
-                    // Action pour la recherche
+                    Intent intent = new Intent(MenuActivity.this, SearchActivity.class);
+                    startActivity(intent);
                     return true;
                 }
 

@@ -29,7 +29,7 @@ import java.util.List;
 
 import modele.Evenement;
 
-public class SearchActivity extends AppCompatActivity {
+public class SearchActivity extends MenuActivity {
     private EditText searchEditText;
     private Button searchButton;
     private ListView resultList;

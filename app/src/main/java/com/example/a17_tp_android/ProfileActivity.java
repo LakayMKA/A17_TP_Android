@@ -25,7 +25,7 @@ import java.util.List;
 
 import modele.Evenement;
 
-public class ProfileActivity extends AppCompatActivity {
+public class ProfileActivity extends MenuActivity {
     private TextView userName, userEmail;
     private ListView eventsCreatedList, eventsParticipatingList;
 
